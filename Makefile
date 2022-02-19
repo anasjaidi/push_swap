@@ -5,7 +5,8 @@ M_SRCS = push_swap.c \
 		in_check/checker.c \
 		in_check/fil_in.c \
 		stack/LinkedList.c \
-		operations/opr.c
+		operations/opr.c \
+		sort/sort_min.c
 M_OBJS = $(M_SRCS:.c=.o)
 all : $(NAME) clean
 

@@ -1,0 +1,7 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/ajaidi/Documents/push_swap'
+gcc -Wall -Wextra -Werror -c sort/sort_min.c -o sort/sort_min.o
+gcc -Wall -Wextra -Werror push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o -o push_swap
+rm -rf push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o
+make: Leaving directory `/Users/ajaidi/Documents/push_swap'
+ 

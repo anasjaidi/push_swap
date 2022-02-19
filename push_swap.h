@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:58:21 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 19:36:26 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/19 23:33:55 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ void	push_stack(t_list **from, t_list **to);
 t_list	*add_front(t_list *new, t_list **head);
 void	reverse_rotate_stack(t_list **head);
 void	rotate_stack(t_list **head);
+void	sort3(t_list **a);
+void	sort2(t_list **a);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:47:31 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 19:41:20 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/19 23:34:29 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@ void	display_stack(t_list *head)
 int	main(int ac, char **av)
 {
 	t_list	*a;
-	t_list	*b;
+	//t_list	*b;
 
 	if (ac > 1)
 	{
 		fil_in(ac, av, &a);
-		reverse_rotate_stack(&a);
+		sort3(&a);
 		printf("-----a-----\n");
 		display_stack(a);
 		printf("-----b-----\n");
-		display_stack(b);
+		//display_stack(b);
 	}
 	return (0);
 }
