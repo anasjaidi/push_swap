@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:47:31 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 19:37:01 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/19 19:41:20 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	display_stack(t_list *head)
 	t_list	*tmp;
 
 	if (!head)
-		return;
+		return ;
 	tmp = head;
 	while (tmp != head->prev)
 	{
@@ -30,8 +30,7 @@ void	display_stack(t_list *head)
 int	main(int ac, char **av)
 {
 	t_list	*a;
-	t_list	*b= NULL;
-	//int		i;
+	t_list	*b;
 
 	if (ac > 1)
 	{

@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:09:07 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 17:32:22 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/19 19:42:42 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,12 @@ int	lst_size(t_list *head)
 
 	if (!head)
 		return (0);
- 	c = 1;
+	c = 1;
 	tmp = head;
 	while (tmp != head->prev)
 	{
 		tmp = tmp->next;
 		c++;
 	}
- 	return (c);
+	return (c);
 }

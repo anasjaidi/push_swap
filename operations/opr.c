@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:16:41 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 19:36:03 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/19 19:42:01 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	swap_stack(t_list *head)
 {
 	int	swap;
-	
+
 	if (lst_size(head) < 1)
 		return ;
 	swap = head->data;
