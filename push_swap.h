@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:58:21 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 23:33:55 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/21 03:37:21 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@
 # include <unistd.h>
 
 typedef struct s_list {
+	int				i;
 	struct s_list	*prev;
+	int				index;
 	int				data;
 	struct s_list	*next;
 }	t_list;
@@ -34,8 +36,10 @@ void	clr_list(t_list *head);
 void	push_stack(t_list **from, t_list **to);
 t_list	*add_front(t_list *new, t_list **head);
 void	reverse_rotate_stack(t_list **head);
+void	sort_index(t_list **stack);
 void	rotate_stack(t_list **head);
 void	sort3(t_list **a);
 void	sort2(t_list **a);
+t_list	*max_index(t_list **stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:16:41 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 19:42:01 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/21 04:16:01 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	swap_stack(t_list *head)
 	swap = head->data;
 	head->data = head->next->data;
 	head->next->data = swap;
+	swap = head->i;
+	head->data = head->next->i;
+	head->next->i = swap;
 }
 
 void	push_stack(t_list **from, t_list **to)
