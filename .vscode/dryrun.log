@@ -3,7 +3,6 @@ make: Entering directory `/Users/ajaidi/Documents/push_swap'
 gcc -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
 gcc -Wall -Wextra -Werror -c in_check/checker.c -o in_check/checker.o
 gcc -Wall -Wextra -Werror -c in_check/fil_in.c -o in_check/fil_in.o
- 
 gcc -Wall -Wextra -Werror -c stack/LinkedList.c -o stack/LinkedList.o
 gcc -Wall -Wextra -Werror -c operations/opr.c -o operations/opr.o
 gcc -Wall -Wextra -Werror -c sort/sort_min.c -o sort/sort_min.o

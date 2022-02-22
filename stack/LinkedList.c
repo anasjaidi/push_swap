@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:09:07 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/21 03:47:06 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/21 15:35:54 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_list	*add_back(t_list *new, t_list **head)
 		new->next = new;
 		new->prev = new;
 		*head = new;
-		(*head)->i =0;
+		(*head)->i = 0;
 		return (NULL);
 	}
 	tail = (*head)->prev;
@@ -58,6 +58,8 @@ t_list	*add_front(t_list *new, t_list **head)
 		new->next = new;
 		new->prev = new;
 		*head = new;
+		*head = new;
+		(*head)->i = 0;
 		return (NULL);
 	}
 	tail = (*head)->prev;

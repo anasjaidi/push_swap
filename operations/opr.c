@@ -6,13 +6,13 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:16:41 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/21 04:16:01 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/21 17:53:31 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	swap_stack(t_list *head)
+void	swap_stack(t_list *head, char *str)
 {
 	int	swap;
 
@@ -21,12 +21,25 @@ void	swap_stack(t_list *head)
 	swap = head->data;
 	head->data = head->next->data;
 	head->next->data = swap;
-	swap = head->i;
-	head->data = head->next->i;
-	head->next->i = swap;
+	if (str)
+		printf("%s",str);
 }
 
-void	push_stack(t_list **from, t_list **to)
+void	index_push(t_list **from)
+{
+	t_list	*tmp;
+
+	tmp = *from;
+	tmp->i = 0;
+	tmp = tmp->next;
+	while (tmp != *from)
+	{
+		tmp->i = tmp->prev->i + 1;
+		tmp = tmp->next ;
+	}
+}
+
+void	push_stack(t_list **from, t_list **to, char *str)
 {
 	t_list	*tmp;
 	t_list	*last;
@@ -44,19 +57,44 @@ void	push_stack(t_list **from, t_list **to)
 		last->next = tmp;
 		free(*from);
 		*from = tmp;
+		index_push(from);
 	}
+	if (str)
+		printf("%s",str);
 }
 
-void	rotate_stack(t_list **head)
+void	rotate_stack(t_list **head, char *str)
 {
+	t_list	*tmp;
+
 	if (lst_size(*head) < 2)
 		return ;
 	*head = (*head)->next;
+	tmp = *head;
+	while (tmp != (*head)->prev)
+	{
+		tmp->i -= 1;
+		tmp = tmp->next;
+	}
+	tmp->i = tmp->prev->i + 1;
+	if (str)
+		printf("%s",str);
 }
 
-void	reverse_rotate_stack(t_list **head)
+void	reverse_rotate_stack(t_list **head, char *str)
 {
+	t_list	*tmp;
 	if (lst_size(*head) < 2)
 		return ;
 	*head = (*head)->prev;
+	tmp = *head;
+	tmp->i = 0;
+	tmp = tmp->next;
+	while (tmp != *head)
+	{
+		tmp->i = tmp->prev->i + 1;
+		tmp = tmp->next ;
+	}
+	if (str)
+		printf("%s",str);
 }

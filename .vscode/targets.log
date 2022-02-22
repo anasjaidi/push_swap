@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Mon Feb 21 03:30:22 2022
+# Make data base, printed on Tue Feb 22 15:35:55 2022
 
 # Variables
 
@@ -43,11 +43,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 P9K_SSH = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cczh00337w/T/vscode-ipc-9acf88d8-6371-4644-a1ff-527518d2bf37.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cczh00337w/T/vscode-ipc-0b6812d7-0732-478a-9635-212d5566990e.sock
 # environment
 VSCODE_CWD = /Users/ajaidi/Documents/push_swap
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.7j2Zx5bzUD/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.SQuzAVtkTm/Render
 # environment
 PATH = /Users/ajaidi/goinfre/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/ajaidi/Downloads/nvim-osx64/bin:/Users/ajaidi/.fig/bin
 # environment
@@ -63,11 +63,11 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.270HmCfAtm/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HWlpdXqDRt/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-TTY = /dev/ttys002
+TTY = /dev/ttys001
 # environment
 FIG_ENV_VAR = 1
 # environment
@@ -83,7 +83,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProce
 # environment
 HOME = /Users/ajaidi
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
@@ -121,7 +121,7 @@ FIG_TERM_VERSION = 3
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:3B6A39A0-31C1-4B5C-AD49-0B1DE4518A43
+TERM_SESSION_ID = w0t0p0:EBAB661D-3383-4102-B7F8-C89E8F6FA43D
 # makefile (from `Makefile', line 3)
 NAME = push_swap
 # environment
@@ -131,7 +131,7 @@ LESS = -R
 # environment
 FIG_INTEGRATION_VERSION = 5
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # environment
 TERM_PROGRAM = iTerm.app
 # default
@@ -159,13 +159,11 @@ LC_TERMINAL_VERSION = 3.4.13
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:3B6A39A0-31C1-4B5C-AD49-0B1DE4518A43
+ITERM_SESSION_ID = w0t0p0:EBAB661D-3383-4102-B7F8-C89E8F6FA43D
 # environment
 COLORFGBG = 7;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x18CFC:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # environment
@@ -178,8 +176,6 @@ ITERM_PROFILE = Default
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a8
 # environment
 P9K_TTY = old
 # automatic
@@ -197,11 +193,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-_P9K_TTY = /dev/ttys002
+_P9K_TTY = /dev/ttys001
 # environment
-VSCODE_PID = 2084
+VSCODE_PID = 2648
 # variable set hash-table stats:
-# Load=94/1024=9%, Rehash=0, Collisions=11/126=9%
+# Load=92/1024=9%, Rehash=0, Collisions=13/124=10%
 
 # Pattern-specific Variable Values
 
@@ -231,7 +227,7 @@ VSCODE_PID = 2084
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-21 01:56:17
+#  Last modified 2022-02-21 22:41:13
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -240,7 +236,7 @@ push_swap.c:
 in_check/fil_in.o: in_check/fil_in.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `in_check/fil_in'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -261,7 +257,7 @@ all: push_swap clean
 # Not a target:
 push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-21 01:56:06
+#  Last modified 2022-02-21 22:41:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -270,7 +266,7 @@ push_swap.h:
 operations/opr.o: operations/opr.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `operations/opr'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -297,7 +293,7 @@ Makefile:
 sort/sort_min.o: sort/sort_min.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort/sort_min'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -318,12 +314,12 @@ in_check/fil_in.c:
 stack/LinkedList.o: stack/LinkedList.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `stack/LinkedList'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+ 
 #  commands to execute (from `Makefile', line 18):
 	$(CC) $(CFLAGS) -c $< -o $@
 	
@@ -339,27 +335,11 @@ fclean: clean
 sort/sort_index.o: sort/sort_index.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort/sort_index'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:12
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := sort/sort_index.o
-# automatic
-# % := 
-# automatic
-# * := sort/sort_index
-# automatic
-# + := sort/sort_index.c push_swap.h
-# automatic
-# | := 
-# automatic
-# < := sort/sort_index.c
-# automatic
-# ^ := sort/sort_index.c push_swap.h
-# automatic
-# ? := sort/sort_index.c
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 18):
 	$(CC) $(CFLAGS) -c $< -o $@
 	
@@ -367,7 +347,7 @@ sort/sort_index.o: sort/sort_index.c push_swap.h
 in_check/checker.o: in_check/checker.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `in_check/checker'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -385,7 +365,7 @@ in_check/checker.o: in_check/checker.c push_swap.h
 # Not a target:
 operations/opr.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-19 19:42:01
+#  Last modified 2022-02-21 17:53:31
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -398,8 +378,28 @@ re: fclean all
 
 clean:
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := clean
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=4/12=33%
 #  commands to execute (from `Makefile', line 21):
 	rm -rf $(M_OBJS)
 	
@@ -407,7 +407,7 @@ clean:
 push_swap.o: push_swap.c push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -418,11 +418,11 @@ push_swap.o: push_swap.c push_swap.h
 
 push_swap: push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-02-21 02:02:20
+#  Last modified 2022-02-21 22:59:12
 #  File has been updated.
-#  Needs to be updated (-q is set).
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 15):
 	$(CC) $(CFLAGS) $^ -o $@
 	
@@ -430,7 +430,7 @@ push_swap: push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o o
 # Not a target:
 sort/sort_min.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-19 23:47:51
+#  Last modified 2022-02-21 17:53:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -439,7 +439,7 @@ sort/sort_min.c:
 # Not a target:
 stack/LinkedList.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-21 01:55:49
+#  Last modified 2022-02-21 15:35:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -448,7 +448,7 @@ stack/LinkedList.c:
 # Not a target:
 sort/sort_index.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-02-21 02:17:44
+#  Last modified 2022-02-21 22:59:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -464,7 +464,7 @@ in_check/checker.c:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/83=0%
+# Load=23/1024=2%, Rehash=0, Collisions=0/84=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -476,6 +476,6 @@ in_check/checker.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Feb 21 03:30:22 2022
+# Finished Make data base on Tue Feb 22 15:35:55 2022
 
  

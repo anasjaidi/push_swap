@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 23:05:04 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 23:47:51 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/21 17:53:15 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ void	sort2(t_list **a)
 		return ;
 	tmp = *a;
 	if (tmp->data > tmp->next->data)
-	{
-		swap_stack(*a);
-		printf("sa\n");
-	}
+		swap_stack(*a,"sa\n");
 }
 
 void	sort3(t_list **a)
@@ -37,27 +34,16 @@ void	sort3(t_list **a)
 	{
 		if (tmp->data > tmp->next->next->data && tmp->next->data \
 		< tmp->next->next->data)
-		{
-			reverse_rotate_stack(a);
-			printf("rra\n");
-		}
+			reverse_rotate_stack(a, "rra\n");
 		else
-		{
-			swap_stack(*a);
-			printf("sa\n");
-		}
+			swap_stack(*a,"sa\n");
 	}
 	if (tmp->data > tmp->next->next->data)
-	{
-		reverse_rotate_stack(a);
-		printf("rra\n");
-	}
+		reverse_rotate_stack(a, "rra\n");
 	if (tmp->data < tmp->next->next->data \
 	&& tmp->next->data > tmp->next->next->data)
 	{
-		swap_stack(*a);
-		printf("sa\n");
-		rotate_stack(a);
-		printf("ra\n");
+		swap_stack(*a, "sa\n");
+		rotate_stack(a, "ra\n");
 	}
 }
