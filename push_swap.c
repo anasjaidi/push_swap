@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:47:31 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 00:36:13 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 18:38:12 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 int	main(int ac, char **av)
 {
-	t_list	*a = NULL;
-	t_list	*b = NULL;
+	t_list	*a;
+	t_list	*b;
 
+	a = NULL;
+	b = NULL;
 	if (ac > 1)
 	{
-		fil_in(ac, av, &a);
+		check_in(ac, av, &a);
 		sort(&a, &b);
 	}
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 05:04:29 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 05:07:18 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 15:47:53 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,22 @@
 void	sort(t_list **a, t_list **b)
 {
 	t_list	*tmp;
+	int		size;	
 
-	sort_index(a);
-	tmp = max_index(a);
-	push_b(a, b, tmp);
-	mix_stack(a, b);
+	size = lst_size(*a);
+	if (size == 2)
+		sort2(a);
+	else if (size == 3)
+		sort3(a);
+	else if (size < 6)
+		sort_4_5(a, b);
+	else
+	{
+		sort_index(a);
+		tmp = max_index(a);
+		push_b(a, b, tmp);
+		mix_stack(a, b);
+	}
 }
 
 void	range_stack(t_list **a, t_list **b, t_list *min)
@@ -102,17 +113,4 @@ void	check_place(t_list **a, t_list **b, t_list *node_p, t_list *markup)
 		write_steps(tmp->next, node_p, *a, *b);
 	else if ((num < markup->data && tmp == markup))
 		write_steps(tmp, node_p, *a, *b);
-}
-
-void    sort_index(t_list **stack)
-{
-    t_list    *tmp1;
-
-    tmp1 = *stack;
-    while (tmp1 != (*stack)->prev)
-    {
-        sort_index_utils(tmp1, tmp1);
-        tmp1 = tmp1->next;
-    }
-    sort_index_utils(tmp1, tmp1);
 }

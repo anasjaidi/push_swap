@@ -6,49 +6,51 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:57:01 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 15:39:25 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 18:36:21 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_sep(char c)
-{
-	if (c == ' ')
-		return (1);
-	if (c == '\0')
-		return (1);
-	return (0);
-}
-
-int	check_num(int ac, char **av)
+int	check_num(char *str)
 {
 	int	i;
-	int	j;
-	int	c;
+
+	i = -1;
+	if (str[0] == '-' || str[0] == '+')
+		i++;
+	while (str[++i])
+		if (!ft_isdigit(str[i]))
+			return (0);
+	return (1);
+}
+
+void	ft_exit(t_list **a)
+{
+	(void)a;
+	clr_list(a);
+	ft_putstr("Eroor\n");
+	exit(0);
+}
+
+void	check_in(int ac, char **av, t_list **a)
+{
+	int		i;
+	char	**str;
 
 	i = 0;
-	c = 0;
 	while (++i < ac)
 	{
-		j = -1;
-		while (av[i][++j])
-			if (!ft_sep(av[i][j]) && ft_sep(av[i][j + 1]))
-				c++;
+		str = ft_split(av[i]);
+		if (!*str)
+			ft_exit(a);
+		while (*str)
+		{
+			if (!check_num(*str))
+				ft_exit(a);
+			else
+				add_back(new_node(ft_atoi(*str)), a);
+			str++;
+		}
 	}
-	return (c);
 }
-// void	check_in(int ac, char **av)
-// {
-// 	int	i;
-// 	int	*arr;
-// 	i = 0;
-// 	arr = malloc(check_num(ac, av) * sizeof(int));
-// 	while (++i < ac)
-// 		check_val(av[i], arr, i);
-// }
-// int main(int argc, char **argv)
-// {
-// 	check_num(argc, argv);
-// 	return 0;
-// }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fil_in.c                                           :+:      :+:    :+:   */
+/*   checker_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/19 15:18:07 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/19 15:39:02 by ajaidi           ###   ########.fr       */
+/*   Created: 2022/02/23 16:32:17 by ajaidi            #+#    #+#             */
+/*   Updated: 2022/02/23 16:34:30 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,17 @@ int	ft_atoi(const char *str)
 	return (r * s);
 }
 
-void	fil_in(int ac, char **av, t_list **head)
+int	ft_isdigit(int c)
 {
-	int	i;
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
+}
 
-	i = 0;
-	while (++i < ac)
-		add_back(new_node(ft_atoi(av[i])), head);
+void	ft_putstr(char *s)
+{
+	if (!s)
+		return ;
+	while (*s)
+		write(1, s++, 1);
 }

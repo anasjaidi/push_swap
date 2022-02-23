@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:09:07 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 00:36:31 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 18:38:32 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,23 @@ t_list	*add_front(t_list *new, t_list **head)
 	return (*head);
 }
 
-void	clr_list(t_list *head)
+void	clr_list(t_list **head)
 {
 	t_list	*temp;
+	t_list	*temp2;
 
-	temp = head;
-	while (temp != temp->prev)
+	if (head && *head)
 	{
-		head = temp->next;
-		free(temp);
-		temp = head;
+		temp = (*head)->next;
+		while (temp && (temp != *head))
+		{
+			temp2 = temp;
+			temp = temp->next;
+			free(temp2);
+		}
+		free(*head);
+		*head = NULL;
 	}
-	free(temp);
 }
 
 int	lst_size(t_list *head)
