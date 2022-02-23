@@ -8,7 +8,10 @@ M_SRCS = push_swap.c \
 		operations/opr.c \
 		sort/sort_min.c \
 		sort/sort_index.c \
-		stack/LinkedList_utils.c
+		stack/LinkedList_utils.c \
+		sort/sort_index_utils.c \
+		sort/sort.c
+
 M_OBJS = $(M_SRCS:.c=.o)
 all : $(NAME) clean
 

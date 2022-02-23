@@ -52,5 +52,13 @@ void	write_steps(t_list *target, t_list *node, t_list *heada, t_list *headb);
 void	calculate_steps(t_list **a, t_list **b, t_list *markup);
 void	mix_stack(t_list **a, t_list **b);
 void	display_stack(t_list *head);
-void    add_front_utils(t_list *new, t_list **head);
+void	sort_index_utils(t_list *a, t_list *b);
+void	add_front_utils(t_list *new, t_list **head);
+void	range_stack_utils(t_list **a, t_list **b, \
+t_list *min, void (*fa)(t_list**, char*), void (*fb)(t_list**, char*));
+t_list	*min_steps(t_list *b);
+t_list	*min_data(t_list *a);
+void	min_on_top(t_list **a);
+void	sort(t_list **a, t_list **b);
+;
 #endif

@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	(*best_function(int x, int y, char **msg, int z))(t_list**, char*)
+void	(*best_function(int x, int y, char **msg, int z))(t_list **s, char *msg)
 {
 	if (x < y / 2)
 	{
@@ -44,7 +44,7 @@ void	sort_index_utils(t_list *a, t_list *b)
 			a->index += 1;
 			max = b->data;
 		}
-		b = b->next; 
+		b = b->next;
 	}
 	if (b->data > max)
 	{
@@ -68,8 +68,8 @@ void	write_steps(t_list *target, t_list *node, t_list *heada, t_list *headb)
 
 void	push_stack_b(t_list **a, t_list **b, t_list *node)
 {
-    t_list  *tmp;
-	char    *msg;
+	t_list	*tmp;
+	char	*msg;
 	void	(*f)(t_list**, char*);
 
 	f = best_function(node->i, lst_size(*a), &msg, 1);
@@ -100,7 +100,7 @@ void	push_b(t_list **a, t_list **b, t_list *head)
 	}
 	if (max < tmp->data)
 	{
-			max = tmp->data;
+		max = tmp->data;
 	}
 	else
 		push_stack_b(a, b, tmp);

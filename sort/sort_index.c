@@ -64,18 +64,20 @@ t_list	*min_steps(t_list *b)
 	return (rtn);
 }
 
-void	range_stack_utils(t_list **a, t_list **b, t_list *min, void	(*fa)(t_list**, char*), void	(*fb)(t_list**, char*))
+void	range_stack_utils(t_list **a, t_list **b, \
+t_list *min, void (*fa)(t_list**, char*), void (*fb)(t_list**, char*))
 {
 	while (*b != min && min->place != *a && (fa == fb && fb == rotate_stack))
 	{
-		(*fa)(a,NULL);
-		(*fb)(b,NULL);
+		(*fa)(a, NULL);
+		(*fb)(b, NULL);
 		printf("rr\n");
 	}
-	while (*b != min && min->place != *a && (fa == fb && fb == reverse_rotate_stack))
+	while (*b != min && min->place != *a && \
+	(fa == fb && fb == reverse_rotate_stack))
 	{
-		(*fa)(a,NULL);
-		(*fb)(b,NULL);
+		(*fa)(a, NULL);
+		(*fb)(b, NULL);
 		printf("rrr\n");
 	}
 }
@@ -100,8 +102,8 @@ t_list	*min_data(t_list *a)
 	}
 	if (min > tmp->data)
 	{
-			min = tmp->data;
-			rtn = tmp;
+		min = tmp->data;
+		rtn = tmp;
 	}
 	return (rtn);
 }

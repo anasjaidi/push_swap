@@ -14,8 +14,8 @@
 
 int	main(int ac, char **av)
 {
-	t_list	*a;
-	t_list	*b;
+	t_list	*a = NULL;
+	t_list	*b = NULL;
 
 	if (ac > 1)
 	{

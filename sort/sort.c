@@ -103,3 +103,16 @@ void	check_place(t_list **a, t_list **b, t_list *node_p, t_list *markup)
 	else if ((num < markup->data && tmp == markup))
 		write_steps(tmp, node_p, *a, *b);
 }
+
+void    sort_index(t_list **stack)
+{
+    t_list    *tmp1;
+
+    tmp1 = *stack;
+    while (tmp1 != (*stack)->prev)
+    {
+        sort_index_utils(tmp1, tmp1);
+        tmp1 = tmp1->next;
+    }
+    sort_index_utils(tmp1, tmp1);
+}
