@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:58:21 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 00:35:54 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 05:01:41 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_list {
 	int				data;
 	struct s_list	*next;
 }	t_list;
+void	(*best_function(int x, int y, char **msg, int z))(t_list**, char*);
 int		lst_size(t_list *head);
 void	swap_stack(t_list *head, char *msg);
 int		ft_sep(char c);
