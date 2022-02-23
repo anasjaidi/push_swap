@@ -1,13 +1,16 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/ajaidi/Documents/push_swap'
-gcc -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
-gcc -Wall -Wextra -Werror -c in_check/checker.c -o in_check/checker.o
-gcc -Wall -Wextra -Werror -c in_check/fil_in.c -o in_check/fil_in.o
-gcc -Wall -Wextra -Werror -c stack/LinkedList.c -o stack/LinkedList.o
-gcc -Wall -Wextra -Werror -c operations/opr.c -o operations/opr.o
-gcc -Wall -Wextra -Werror -c sort/sort_min.c -o sort/sort_min.o
-gcc -Wall -Wextra -Werror -c sort/sort_index.c -o sort/sort_index.o
-gcc -Wall -Wextra -Werror push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o -o push_swap
-rm -rf push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o
+gcc -g -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
+ 
+gcc -g -Wall -Wextra -Werror -c in_check/checker.c -o in_check/checker.o
+gcc -g -Wall -Wextra -Werror -c in_check/fil_in.c -o in_check/fil_in.o
+gcc -g -Wall -Wextra -Werror -c stack/LinkedList.c -o stack/LinkedList.o
+ 
+gcc -g -Wall -Wextra -Werror -c operations/opr.c -o operations/opr.o
+gcc -g -Wall -Wextra -Werror -c sort/sort_min.c -o sort/sort_min.o
+gcc -g -Wall -Wextra -Werror -c sort/sort_index.c -o sort/sort_index.o
+gcc -g -Wall -Wextra -Werror -c stack/LinkedList_utils.c -o stack/LinkedList_utils.o
+gcc -g -Wall -Wextra -Werror push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o -o push_swap
+rm -rf push_swap.o in_check/checker.o in_check/fil_in.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o
 make: Leaving directory `/Users/ajaidi/Documents/push_swap'
  

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 NAME = push_swap
 M_SRCS = push_swap.c \
 		in_check/checker.c \
@@ -7,7 +7,8 @@ M_SRCS = push_swap.c \
 		stack/LinkedList.c \
 		operations/opr.c \
 		sort/sort_min.c \
-		sort/sort_index.c
+		sort/sort_index.c \
+		stack/LinkedList_utils.c
 M_OBJS = $(M_SRCS:.c=.o)
 all : $(NAME) clean
 

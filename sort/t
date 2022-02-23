@@ -1,0 +1,21 @@
+void	range_stack_utils(t_list **a, t_list **b, t_list *min, void	(*fa)(t_list**, char*), void	(*fb)(t_list**, char*))
+{
+	while (*b != min && min->place != *a && (fa == fb && fb == rotate_stack))
+	{
+		(*fa)(a,NULL);
+		(*fb)(b,NULL);
+		printf("rr\n");
+	}
+	while (*b != min && min->place != *a && (fa == fb && fb == reverse_rotate_stack))
+	{
+		(*fa)(a,NULL);
+		(*fb)(b,NULL);
+		printf("rrr\n");
+	}
+}
+
+	fa = best_function(min->place->i, lst_size(*a), 0, &msga);
+	fb = best_function(min->i, lst_size(*b), 0, &msgb);
+
+    fa = best_function(min->place->i, lst_size(*a), &msga);
+	fb = best_function(min->i, lst_size(*b), &msgb);

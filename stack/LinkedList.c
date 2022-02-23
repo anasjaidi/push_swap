@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:09:07 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/21 15:35:54 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/23 00:36:31 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ t_list	*new_node(int data)
 	new->index = 1;
 	new->next = NULL;
 	new->prev = NULL;
+	new->place = NULL;
 	return (new);
 }
 
@@ -51,8 +52,6 @@ t_list	*add_back(t_list *new, t_list **head)
 
 t_list	*add_front(t_list *new, t_list **head)
 {
-	t_list	*tail;
-
 	if (!(*head))
 	{
 		new->next = new;
@@ -62,20 +61,7 @@ t_list	*add_front(t_list *new, t_list **head)
 		(*head)->i = 0;
 		return (NULL);
 	}
-	tail = (*head)->prev;
-	new->next = *head;
-	new->prev = tail;
-	(*head)->prev = new;
-	tail->next = new;
-	tail = new;
-	*head = new;
-	new->i = -1;
-	while (new != (*head)->prev)
-	{
-		new->i += 1;
-		new = new->next;
-	}
-	new->i += 1;
+	add_front_utils(new, head);
 	return (*head);
 }
 
@@ -109,4 +95,3 @@ int	lst_size(t_list *head)
 	}
 	return (c);
 }
-
