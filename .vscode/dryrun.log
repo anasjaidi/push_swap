@@ -5,7 +5,6 @@ gcc -g -Wall -Wextra -Werror -c in_check/checker.c -o in_check/checker.o
 gcc -g -Wall -Wextra -Werror -c stack/LinkedList.c -o stack/LinkedList.o
 gcc -g -Wall -Wextra -Werror -c operations/opr.c -o operations/opr.o
 gcc -g -Wall -Wextra -Werror -c sort/sort_min.c -o sort/sort_min.o
- 
 gcc -g -Wall -Wextra -Werror -c sort/sort_index.c -o sort/sort_index.o
 gcc -g -Wall -Wextra -Werror -c stack/LinkedList_utils.c -o stack/LinkedList_utils.o
 gcc -g -Wall -Wextra -Werror -c sort/sort_index_utils.c -o sort/sort_index_utils.o

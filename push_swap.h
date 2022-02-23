@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:58:21 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 18:24:55 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/24 00:06:49 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# define MX 536870912
 
 typedef struct s_list {
 	int				steps;

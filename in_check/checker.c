@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:57:01 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 18:36:21 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/24 00:06:37 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,17 @@ void	ft_exit(t_list **a)
 	exit(0);
 }
 
+int	hash(unsigned int x)
+{
+	static char	map[MX];
+
+	if (!(map[x / 8] >> (7 - (x % 8)) & 1))
+		map[x / 8] = map[x / 8] | 1 << (7 - (x % 8));
+	else
+		return (0);
+	return (1);
+}
+
 void	check_in(int ac, char **av, t_list **a)
 {
 	int		i;
@@ -46,7 +57,7 @@ void	check_in(int ac, char **av, t_list **a)
 			ft_exit(a);
 		while (*str)
 		{
-			if (!check_num(*str))
+			if (!check_num(*str) || !hash(ft_atoi(*str)))
 				ft_exit(a);
 			else
 				add_back(new_node(ft_atoi(*str)), a);
