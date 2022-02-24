@@ -1,4 +1,4 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/ajaidi/Documents/push_swap'
 gcc -g -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
 gcc -g -Wall -Wextra -Werror -c in_check/checker.c -o in_check/checker.o
@@ -12,6 +12,6 @@ gcc -g -Wall -Wextra -Werror -c sort/sort.c -o sort/sort.o
 gcc -g -Wall -Wextra -Werror -c in_check/ft_split.c -o in_check/ft_split.o
 gcc -g -Wall -Wextra -Werror -c in_check/checker_utils.c -o in_check/checker_utils.o
 gcc -g -Wall -Wextra -Werror push_swap.o in_check/checker.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o sort/sort_index_utils.o sort/sort.o in_check/ft_split.o in_check/checker_utils.o -o push_swap
-rm -rf push_swap.o in_check/checker.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o sort/sort_index_utils.o sort/sort.o in_check/ft_split.o in_check/checker_utils.o
+rm -rf push_swap.o in_check/checker.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o sort/sort_index_utils.o sort/sort.o in_check/ft_split.o in_check/checker_utils.o checker_bonus.o get_next_line.o get_next_line_utils.o in_check/checker.o stack/LinkedList.o operations/opr.o sort/sort_min.o sort/sort_index.o stack/LinkedList_utils.o sort/sort_index_utils.o sort/sort.o in_check/ft_split.o in_check/checker_utils.o
 make: Leaving directory `/Users/ajaidi/Documents/push_swap'
  

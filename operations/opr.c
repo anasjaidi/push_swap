@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 16:16:41 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 00:27:17 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/24 02:19:27 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	swap_stack(t_list *head, char *str)
 	head->data = head->next->data;
 	head->next->data = swap;
 	if (str)
-		printf("%s", str);
+		ft_putstr(str);
 }
 
 void	index_push(t_list **from)
@@ -50,7 +50,10 @@ void	push_stack(t_list **from, t_list **to, char *str)
 	last = (*from)->prev;
 	add_front(new_node((*from)->data), to);
 	if (lst_size(*from) == 1)
+	{
 		*from = NULL;
+		free(*from);
+	}
 	else
 	{
 		tmp->prev = last;
@@ -60,7 +63,7 @@ void	push_stack(t_list **from, t_list **to, char *str)
 		index_push(from);
 	}
 	if (str)
-		printf("%s", str);
+		ft_putstr(str);
 }
 
 void	rotate_stack(t_list **head, char *str)
@@ -78,7 +81,7 @@ void	rotate_stack(t_list **head, char *str)
 	}
 	tmp->i = tmp->prev->i + 1;
 	if (str)
-		printf("%s", str);
+		ft_putstr(str);
 }
 
 void	reverse_rotate_stack(t_list **head, char *str)
@@ -97,5 +100,5 @@ void	reverse_rotate_stack(t_list **head, char *str)
 		tmp = tmp->next ;
 	}
 	if (str)
-		printf("%s", str);
+		ft_putstr(str);
 }

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 16:58:21 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/24 02:26:05 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/24 02:26:29 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # define MX 536870912
+# define BUFFER_SIZE 10000
 
 typedef struct s_list {
 	int				steps;
@@ -82,5 +83,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*get_next_line(int fd);
 int		ft_strncmp(const char *s1, const char *s2);
-
 #endif

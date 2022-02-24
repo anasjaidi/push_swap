@@ -6,7 +6,7 @@
 /*   By: ajaidi <ajaidi@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 00:21:24 by ajaidi            #+#    #+#             */
-/*   Updated: 2022/02/23 05:06:31 by ajaidi           ###   ########.fr       */
+/*   Updated: 2022/02/24 02:17:32 by ajaidi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,14 @@ t_list *min, void (*fa)(t_list**, char*), void (*fb)(t_list**, char*))
 	{
 		(*fa)(a, NULL);
 		(*fb)(b, NULL);
-		printf("rr\n");
+		ft_putstr("rr\n");
 	}
 	while (*b != min && min->place != *a && \
 	(fa == fb && fb == reverse_rotate_stack))
 	{
 		(*fa)(a, NULL);
 		(*fb)(b, NULL);
-		printf("rrr\n");
+		ft_putstr("rrr\n");
 	}
 }
 
